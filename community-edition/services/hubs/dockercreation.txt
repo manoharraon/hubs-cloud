@@ -1,0 +1,11 @@
+Step 1:
+Docker login -u stramzik
+
+Step 2: go to the services folder in the CE main folder
+ex : cd /Desktop/HC/hubs-cloud/community-edition/services
+
+Step 3: build the image by running in the below example we are building HUBS
+docker build -t stramzik/hubs:customLogger -f ./hubs/Dockerfile ./hubs 
+
+Step 4: push the docker image to docker hub
+docker push stramzik/hubs:customLogger
