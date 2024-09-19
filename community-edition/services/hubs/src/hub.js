@@ -20,6 +20,10 @@ console.log(
   }`
 );
 
+// added lines for testingdocker 
+import './systems/research/research-logger';
+import './systems/research/research-tourguide';
+
 import "./react-components/styles/global.scss";
 import "./assets/stylesheets/globals.scss";
 import "./assets/stylesheets/hub.scss";

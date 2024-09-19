@@ -9,7 +9,8 @@ PUB_IP_CURL=https://ipinfo.io/ip
 # healthcheck &
 echo -e $(echo -e ${perms_key//\n/n}) > /app/certs/perms.pub.pem        
 head -3 /app/certs/perms.pub.pem
-export MEDIASOUP_ANNOUNCED_IP=$(curl ${PUB_IP_CURL})
+# export MEDIASOUP_ANNOUNCED_IP=$(curl ${PUB_IP_CURL})
+export MEDIASOUP_ANNOUNCED_IP=140.203.155.22
 echo "MEDIASOUP_ANNOUNCED_IP: $MEDIASOUP_ANNOUNCED_IP"
 export INTERACTIVE=nope
 
