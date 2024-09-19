@@ -160,6 +160,14 @@ SceneInfo.propTypes = {
 };
 
 export function RoomSidebar({ room, accountId, onClose, canEdit, onEdit, onChangeScene }) {
+  function onOpenAdminPanel() {
+    localStorage.setItem("vrdialog-room-data", JSON.stringify(room));
+    // let newPageUrl = "https://vrdialoguedata.com:3000";
+    let newPageUrl = "https://140.203.155.155:3000";
+    // route to new page by changing window.location
+    window.open(newPageUrl, "_blank"); //to open new page
+  }
+
   return (
     <Sidebar
       title={<FormattedMessage id="room-sidebar.title" defaultMessage="Room" />}
@@ -181,6 +189,9 @@ export function RoomSidebar({ room, accountId, onClose, canEdit, onEdit, onChang
             {room.description}
           </InputField>
         )}
+        <Button preset="primary" onClick={onOpenAdminPanel}>
+          Open Admin Panel
+        </Button>
         <SceneInfo
           accountId={accountId}
           scene={room.scene}
