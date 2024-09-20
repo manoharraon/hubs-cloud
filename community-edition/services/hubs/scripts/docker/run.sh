@@ -1,4 +1,3 @@
-
 #cheatsheet
 #if [ -z ${var1+x} ]; then echo "is unset"; else echo " is set to '$var1'"; fi
 if [ -z ${turkeyCfg_thumbnail_server+x} ]; then export turkeyCfg_thumbnail_server="nearspark.reticulum.io"; fi

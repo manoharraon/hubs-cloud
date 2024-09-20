@@ -201,7 +201,7 @@ AFRAME.registerSystem("research-logger", {
   });
   */
 
-  researchCollect(data, url = "https://140.203.155.155/log") {
+  researchCollect(data, url = "https://mrrao.xyz/data") {
     if (data === undefined) return;
     console.log(data);
     const requestOptions = {
